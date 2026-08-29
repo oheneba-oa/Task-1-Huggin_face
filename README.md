@@ -1,43 +1,28 @@
-# Hugging Face Transformer and Dataset Project
+# Hugging Face Beginner Setup Project
 
-## Project Overview
+This repository contains my first hands-on setup for working with modern data science tools and Hugging Face.
 
-This project demonstrates a basic end-to-end setup for working with the Hugging Face ecosystem in Python.
-
-The project focuses on four main activities:
-
-1. Creating and managing a GitHub repository.
-2. Creating an isolated Python environment.
-3. Installing the required machine learning and data science packages.
-4. Loading and working with a Hugging Face dataset and Transformer model.
-
-The project is intended to provide a reproducible foundation for future work involving Natural Language Processing, multimodal learning, pretrained Transformer models, and Hugging Face datasets.
-
----
+The purpose of this task is to learn how to create a GitHub repository, set up a Python environment, install basic packages, load a dataset from Hugging Face, and use a pretrained Transformer model.
 
 ## Objectives
 
-The objectives of this project are to:
+The main objectives of this task are to:
 
-- Create a structured GitHub repository for a machine learning project.
-- Use a dedicated Python environment to manage dependencies.
-- Install commonly used Python packages for data science and machine learning.
-- Install Hugging Face libraries such as `transformers`, `datasets`, and `huggingface_hub`.
-- Select and load a dataset from the Hugging Face Hub.
-- Select and load a pretrained Transformer model from Hugging Face.
-- Demonstrate how Hugging Face resources can be accessed directly from Python.
-- Document the project in a way that allows another user to reproduce the environment and workflow.
+- Create a GitHub repository.
+- Create a Python environment.
+- Install basic data science packages.
+- Install Hugging Face libraries.
+- Load a dataset from Hugging Face.
+- Load a pretrained Transformer model.
+- Document the setup process.
 
----
-
-## Repository Structure
-
-The repository is organized as follows:
+## Project Structure
 
 ```text
 Task-1-Huggin_face/
 │
 ├── README.md
+├── DOCUMENTATION.md
 ├── requirements.txt
 ├── load_dataset.py
 └── model_test.py
