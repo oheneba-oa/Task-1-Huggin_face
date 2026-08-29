@@ -1,47 +1,27 @@
-# Project 1
+# Special Project 1
 
-This repository contains a Python environment for introductory work in data science, machine learning, and Hugging Face workflows. The environment includes tools for data analysis, notebook development, deep learning, and working with pretrained models and datasets.
+This repository contains a Python environment for introductory work in data science, machine learning, and Hugging Face workflows. The included dependencies support exploratory notebooks, Hugging Face models and datasets, embeddings, fine-tuning, retrieval-augmented generation (RAG), and Modal-based cloud execution.
 
 ## Topics
 
-- Data science with NumPy, pandas, Matplotlib, and scikit-learn
+- Data science with NumPy, pandas, matplotlib, and scikit-learn
 - Interactive notebook development with Jupyter and IPython kernels
-- Deep learning with PyTorch
-- Hugging Face models and datasets
-- Basic environment and dependency management
+- Model and dataset workflows with PyTorch and Hugging Face
+- Sentence embeddings with Sentence Transformers
+- Parameter-efficient fine-tuning with PEFT and TRL
+- RAG applications with LangChain, ChromaDB, and PDF ingestion
+- Cloud execution with Modal
 
 ## Setup
 
 Prerequisites: Python 3.11, Conda, Git, and `pip`.
 
-Clone the repository:
-
 ```bash
 git clone <your-repository-url>
 cd Task-1-Huggin_face
-```
-
-Create the Conda environment:
-
-```bash
 conda create -n hf_project python=3.11 -y
-```
-
-Activate the environment:
-
-```bash
 conda activate hf_project
-```
-
-Upgrade `pip`:
-
-```bash
 python -m pip install --upgrade pip
-```
-
-Install the required packages:
-
-```bash
 python -m pip install -r requirements.txt
 ```
 
@@ -57,117 +37,53 @@ When creating a notebook, select the Python kernel associated with the `hf_proje
 
 ## Dependencies
 
-The full dependency list is maintained in `requirements.txt`.
+The full dependency list is maintained in `requirements.txt`. Install or update the environment whenever that file changes:
 
-The environment includes the following main package groups:
+```bash
+python -m pip install -r requirements.txt
+```
 
-### General Data Science
+The current dependencies are:
 
 ```text
+# General Data Science
 numpy
 pandas
 matplotlib
 scikit-learn
-```
 
-### Jupyter
-
-```text
+# Jupyter
 jupyter
 ipykernel
-```
 
-### Hugging Face
-
-```text
+# Hugging Face
 torch
 transformers
 datasets
 huggingface_hub
 accelerate
 evaluate
-```
 
-## Additional Packages
-
-The environment also includes packages that may be used in later practical work.
-
-### Embeddings
-
-```text
+# Embeddings
 sentence-transformers
-```
 
-### Fine-Tuning
-
-```text
+# Fine-Tuning
 peft
 trl
-```
 
-### Retrieval-Augmented Generation
-
-```text
+# RAG
 langchain
 langchain-community
 chromadb
 pypdf
-```
 
-### Cloud Execution
-
-```text
+# Modal
 modal
-```
-
-To install or update the environment whenever `requirements.txt` changes:
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-## Environment Verification
-
-Check the available Conda environments:
-
-```bash
-conda env list
-```
-
-Activate the project environment:
-
-```bash
-conda activate hf_project
-```
-
-Check the Python version:
-
-```bash
-python --version
-```
-
-Check the installed packages:
-
-```bash
-pip list
 ```
 
 ## Optional Services
 
-Some services may require authentication before use.
+Some workflows require their own authentication before use:
 
-- Hugging Face: use `huggingface-cli login` when accessing gated models, private repositories, or publishing resources.
-- Modal: use `modal setup` before running cloud workloads.
-
-## Repository Files
-
-```text
-Task-1-Huggin_face/
-├── README.md
-├── DOCUMENTATION.md
-└── requirements.txt
-```
-
-- `README.md` contains the project setup and usage instructions.
-- `DOCUMENTATION.md` contains the task documentation.
-- `requirements.txt` contains the required Python packages.
+- Hugging Face: authenticate with `huggingface-cli login` when accessing gated models, private repositories, or publishing assets.
+- Modal: authenticate with `modal setup` before running cloud functions.
