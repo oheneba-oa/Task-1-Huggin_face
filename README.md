@@ -1,28 +1,24 @@
-# Hugging Face Beginner Setup Project
+# Data Science and Hugging Face Environment Setup
 
-This repository contains my first hands-on setup for working with modern data science tools and Hugging Face.
+This repository contains my first setup for a Python environment used for modern data science and Hugging Face workflows.
 
-The purpose of this task is to learn how to create a GitHub repository, set up a Python environment, install basic packages, load a dataset from Hugging Face, and use a pretrained Transformer model.
+The aim of this task is to practice creating a GitHub repository, setting up an isolated Python environment, installing useful packages, and documenting the environment in a reproducible way.
 
 ## Objectives
 
-The main objectives of this task are to:
+The objectives of this task are to:
 
 - Create a GitHub repository.
 - Create a Python environment.
-- Install basic data science packages.
-- Install Hugging Face libraries.
-- Load a dataset from Hugging Face.
-- Load a pretrained Transformer model.
-- Document the setup process.
+- Install basic data science and machine learning packages.
+- Install Hugging Face-related packages.
+- Store the required dependencies in a `requirements.txt` file.
+- Document the setup process clearly.
 
-## Project Structure
+## Repository Structure
 
 ```text
 Task-1-Huggin_face/
-│
 ├── README.md
 ├── DOCUMENTATION.md
-├── requirements.txt
-├── load_dataset.py
-└── model_test.py
+└── requirements.txt
