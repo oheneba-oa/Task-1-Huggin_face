@@ -1,4 +1,4 @@
-# Special Project 1
+# Project 1
 
 This repository contains a Python environment for introductory work in data science, machine learning, and Hugging Face workflows. The included dependencies support exploratory notebooks, Hugging Face models and datasets, embeddings, fine-tuning, retrieval-augmented generation (RAG), and Modal-based cloud execution.
 
