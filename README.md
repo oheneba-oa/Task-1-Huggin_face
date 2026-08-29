@@ -1,6 +1,8 @@
 # Special Project 1
 
-This repository contains a Python environment created for introductory practical work in data science, machine learning, and Hugging Face workflows. The environment includes commonly used packages for data analysis, notebook development, deep learning, and working with pretrained models and datasets.
+This repository contains a Python environment created for introductory hands-on work in data science, machine learning, and modern large language model workflows.
+
+The environment includes packages for data analysis, notebook development, Hugging Face models and datasets, sentence embeddings, parameter-efficient fine-tuning, retrieval-augmented generation (RAG), and cloud execution with Modal.
 
 ## Topics
 
@@ -9,22 +11,34 @@ This repository contains a Python environment created for introductory practical
 - Machine learning with scikit-learn
 - Interactive notebook development with Jupyter
 - Deep learning with PyTorch
-- Model and dataset workflows with Hugging Face
-- Preparation for future practical work involving modern AI tools
+- Hugging Face models and datasets
+- Sentence embeddings with Sentence Transformers
+- Parameter-efficient fine-tuning with PEFT and TRL
+- Retrieval-Augmented Generation with LangChain and ChromaDB
+- PDF processing with PyPDF
+- Cloud execution with Modal
 
 ## Setup
 
 ### Prerequisites
 
-- Python 3.11
-- Conda, Anaconda, or Miniconda
+Before setting up the project, make sure the following are available:
+
 - Git
+- Conda, Anaconda, or Miniconda
+- Python 3.11
 - `pip`
+- Internet connection
 
 Clone the repository:
 
 ```bash
 git clone <your-repository-url>
+```
+
+Move into the project directory:
+
+```bash
 cd Task-1-Huggin_face
 ```
 
@@ -60,7 +74,7 @@ After activating the environment, launch Jupyter Lab:
 jupyter lab
 ```
 
-You can also start the classic Jupyter Notebook interface using:
+Jupyter Notebook can also be launched using:
 
 ```bash
 jupyter notebook
@@ -72,8 +86,6 @@ When creating a notebook, select the Python kernel associated with the `hf_proje
 
 The full dependency list is maintained in `requirements.txt`.
 
-The main groups of packages included in the environment are:
-
 ### General Data Science
 
 ```text
@@ -83,7 +95,7 @@ matplotlib
 scikit-learn
 ```
 
-These packages support numerical computing, data manipulation, visualization, and basic machine learning.
+These packages provide tools for numerical computing, data manipulation, visualization, and machine learning.
 
 ### Jupyter
 
@@ -94,26 +106,70 @@ ipykernel
 
 These packages provide an interactive notebook environment for writing and running Python code.
 
-### Deep Learning and Hugging Face
+### Hugging Face
 
 ```text
 torch
 transformers
 datasets
 huggingface_hub
+accelerate
+evaluate
 ```
 
-These packages support deep learning, pretrained Transformer models, Hugging Face datasets, and interaction with the Hugging Face Hub.
+These packages support deep learning, pretrained Transformer models, Hugging Face datasets, model execution, and evaluation.
 
-To install or update the environment whenever `requirements.txt` changes:
+### Embeddings
+
+```text
+sentence-transformers
+```
+
+Sentence Transformers provides tools for creating numerical vector representations of text that can be used for similarity search, semantic search, and other NLP tasks.
+
+### Fine-Tuning
+
+```text
+peft
+trl
+```
+
+PEFT and TRL provide tools that can be used for efficient fine-tuning and training of pretrained language models.
+
+### Retrieval-Augmented Generation
+
+```text
+langchain
+langchain-community
+chromadb
+pypdf
+```
+
+These packages support basic RAG workflows, including document loading, PDF processing, vector storage, retrieval, and integration with language models.
+
+### Modal
+
+```text
+modal
+```
+
+Modal provides tools for running Python workloads in a cloud environment.
+
+## requirements.txt
+
+The `requirements.txt` file contains all packages required for the environment.
+
+Whenever the file is updated, the environment can be updated using:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
+This makes it easier to recreate the same working environment on another computer.
+
 ## Environment Verification
 
-To confirm that the environment was created successfully:
+Check that the Conda environment exists:
 
 ```bash
 conda env list
@@ -121,7 +177,7 @@ conda env list
 
 The `hf_project` environment should appear in the list.
 
-Activate it:
+Activate the environment:
 
 ```bash
 conda activate hf_project
@@ -139,17 +195,29 @@ Check the installed packages:
 pip list
 ```
 
+These commands can be used to confirm that the environment and dependencies were installed successfully.
+
 ## Optional Services
 
-Some Hugging Face resources may require authentication.
+Some tools may require authentication before they can be used.
 
-For gated models, private repositories, or publishing assets, authenticate using:
+### Hugging Face
+
+Public models and datasets can usually be accessed without logging in.
+
+For gated models, private repositories, or publishing resources to Hugging Face, authentication may be required:
 
 ```bash
 huggingface-cli login
 ```
 
-Public Hugging Face models and datasets can usually be accessed without logging in.
+### Modal
+
+Modal requires authentication before running cloud workloads:
+
+```bash
+modal setup
+```
 
 ## Repository Files
 
@@ -160,6 +228,12 @@ Task-1-Huggin_face/
 └── requirements.txt
 ```
 
-- `README.md` contains the project setup and usage instructions.
-- `DOCUMENTATION.md` records the steps followed during the task.
-- `requirements.txt` contains the Python dependencies for the environment.
+- `README.md` contains the project overview, setup instructions, and dependency information.
+- `DOCUMENTATION.md` explains the steps followed during the setup task.
+- `requirements.txt` contains the Python dependencies required for the environment.
+
+## Purpose
+
+The purpose of this task is to create a clean and reproducible Python environment for future practical work in Special Topics in Data Science.
+
+At this stage, the focus is on environment setup, dependency installation, repository management, and documentation. The installed packages prepare the environment for later exercises involving data analysis, machine learning, Hugging Face models and datasets, embeddings, fine-tuning, RAG, and cloud-based execution.
