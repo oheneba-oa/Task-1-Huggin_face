@@ -1,4 +1,4 @@
-# Special Project 1
+# Project 1
 
 This repository contains a Python environment created for introductory hands-on work in data science, machine learning, and modern large language model workflows.
 
